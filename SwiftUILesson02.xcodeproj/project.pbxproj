@@ -13,6 +13,10 @@
 		5E5BE1DE25BD480000F65F35 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E5BE1DD25BD480000F65F35 /* Preview Assets.xcassets */; };
 		5E5BE1E925BD480100F65F35 /* SwiftUILesson02Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5BE1E825BD480100F65F35 /* SwiftUILesson02Tests.swift */; };
 		5E5BE1F425BD480100F65F35 /* SwiftUILesson02UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5BE1F325BD480100F65F35 /* SwiftUILesson02UITests.swift */; };
+		5E5BE20525BD489300F65F35 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5BE20425BD489300F65F35 /* Item.swift */; };
+		5E5BE20A25BD48BC00F65F35 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5BE20925BD48BC00F65F35 /* ItemView.swift */; };
+		5E5BE20F25BD5DB700F65F35 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5BE20E25BD5DB700F65F35 /* DetailView.swift */; };
+		5E5BE21825BD5F3D00F65F35 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E5BE21A25BD5F3D00F65F35 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,11 @@
 		5E5BE1EF25BD480100F65F35 /* SwiftUILesson02UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUILesson02UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E5BE1F325BD480100F65F35 /* SwiftUILesson02UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUILesson02UITests.swift; sourceTree = "<group>"; };
 		5E5BE1F525BD480100F65F35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E5BE20425BD489300F65F35 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		5E5BE20925BD48BC00F65F35 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		5E5BE20E25BD5DB700F65F35 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		5E5BE21925BD5F3D00F65F35 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5E5BE21B25BD5F6100F65F35 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +109,10 @@
 				5E5BE1DA25BD480000F65F35 /* Assets.xcassets */,
 				5E5BE1DF25BD480000F65F35 /* Info.plist */,
 				5E5BE1DC25BD480000F65F35 /* Preview Content */,
+				5E5BE20425BD489300F65F35 /* Item.swift */,
+				5E5BE20925BD48BC00F65F35 /* ItemView.swift */,
+				5E5BE20E25BD5DB700F65F35 /* DetailView.swift */,
+				5E5BE21A25BD5F3D00F65F35 /* Localizable.strings */,
 			);
 			path = SwiftUILesson02;
 			sourceTree = "<group>";
@@ -215,6 +228,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = 5E5BE1CA25BD47FF00F65F35;
 			productRefGroup = 5E5BE1D425BD47FF00F65F35 /* Products */;
@@ -234,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E5BE1DE25BD480000F65F35 /* Preview Assets.xcassets in Resources */,
+				5E5BE21825BD5F3D00F65F35 /* Localizable.strings in Resources */,
 				5E5BE1DB25BD480000F65F35 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,7 +275,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E5BE1D925BD47FF00F65F35 /* ContentView.swift in Sources */,
+				5E5BE20525BD489300F65F35 /* Item.swift in Sources */,
 				5E5BE1D725BD47FF00F65F35 /* SwiftUILesson02App.swift in Sources */,
+				5E5BE20F25BD5DB700F65F35 /* DetailView.swift in Sources */,
+				5E5BE20A25BD48BC00F65F35 /* ItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,11 +313,24 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		5E5BE21A25BD5F3D00F65F35 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E5BE21925BD5F3D00F65F35 /* en */,
+				5E5BE21B25BD5F6100F65F35 /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		5E5BE1F625BD480100F65F35 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -361,6 +392,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -419,6 +451,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUILesson02/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftUILesson02/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -440,6 +473,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUILesson02/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftUILesson02/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;

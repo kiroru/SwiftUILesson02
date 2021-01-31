@@ -8,10 +8,40 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var items:[Item] = []
+    @State var isPresentDetailView = false
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+
+        ScrollView() {
+            LazyVStack(alignment: .leading) {
+                ForEach(items) { item in
+                    ItemView(item: item)
+                        .onTapGesture {
+                            isPresentDetailView = true
+                        }
+                        .fullScreenCover(isPresented: $isPresentDetailView, content: {
+                            DetailView(item: item, isPresent: $isPresentDetailView)
+                        })
+                }
+            }
+        }
+        .navigationBarHidden(true)
+        .onAppear() {
+            if items.count == 0 {
+                for i in 1...50 {
+                    items.append(
+                        Item(
+                            title: "\(NSLocalizedString("title", comment: "")) \(i)",
+                            explanation: "\(NSLocalizedString("explanation", comment: "")) \(i)"
+                        )
+                    )
+                }
+            }
+        }
     }
+
 }
 
 struct ContentView_Previews: PreviewProvider {
